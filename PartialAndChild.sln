@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PartialAndChild", "PartialAndChild\PartialAndChild.csproj", "{1C7F7558-DE06-4F39-9D26-05F84C327B01}"
+EndProject
+Global
+	GlobalSection(CodealikeProperties) = postSolution
+		SolutionGuid = 10529e50-36af-42d1-8aac-4a4a3bcb6159
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1C7F7558-DE06-4F39-9D26-05F84C327B01}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1C7F7558-DE06-4F39-9D26-05F84C327B01}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1C7F7558-DE06-4F39-9D26-05F84C327B01}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1C7F7558-DE06-4F39-9D26-05F84C327B01}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

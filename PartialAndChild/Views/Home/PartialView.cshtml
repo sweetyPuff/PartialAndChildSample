@@ -1,0 +1,19 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="alert alert-info">
+    <p class="lead">示範重複使用 PartialView</p>
+</div>
+
+<div class="row">
+    <div class="col-md-4">
+        @Html.Partial("_ForIndexPartialView", DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss ffff"))
+    </div>
+    <div class="col-md-4">
+        @Html.Partial("_ForIndexPartialView", DateTime.Now.AddDays(1).ToString("yyyy-MM-dd HH:mm:ss ffff"))
+    </div>
+    <div class="col-md-4">
+        @Html.Partial("_ForIndexPartialView", DateTime.Now.AddDays(2).ToString("yyyy-MM-dd HH:mm:ss ffff"))
+    </div>
+</div>

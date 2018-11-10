@@ -1,0 +1,54 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+<div class="alert alert-info">
+    <p class="lead">示範使用 AJAX ,PartialView ,Child Action 的差異</p>
+</div>
+
+<div class="row">
+    <div class="col-md-4" data-ajax="0">
+        <div class="panel panel-danger">
+            <div class="panel-heading">Pure AJAX</div>
+            <div class="panel-body">
+                <i class="fa fa-spinner fa-pulse"></i>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4" data-ajax="1">
+        <div class="panel panel-danger">
+            <div class="panel-heading">Pure AJAX</div>
+            <div class="panel-body">
+                <i class="fa fa-spinner fa-pulse"></i>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4" data-ajax="2">
+        <div class="panel panel-danger">
+            <div class="panel-heading">Pure AJAX</div>
+            <div class="panel-body">
+                <i class="fa fa-spinner fa-pulse"></i>
+            </div>
+        </div>
+    </div>
+</div>
+@Html.Hidden("ajaxUrl", Url.Action("ForAjax"))
+@section scripts
+{
+    <script>
+        $(function() {
+            $("[data-ajax]").each(function (i) {
+                var self = $(this);
+                $.ajax({
+                    type: "GET",
+                    url: $("#ajaxUrl").val(),
+                    data: { i: i },
+                    dataType: "HTML",
+                    success: function(response) {
+                        self.html(response);
+                    }
+                });
+
+            });
+        });
+    </script>
+}
